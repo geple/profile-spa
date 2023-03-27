@@ -4,8 +4,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <img alt="G icon" class="logo" src="assets/favicon.ico" width="125" height="125" />
-
     <div class="wrapper">
 
       <nav>
