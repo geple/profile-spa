@@ -23,30 +23,22 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
 
-  <RouterView />
+  <div class="content">
+    <RouterView />
+  </div>
+
   <div class="foot">
     <p>Footer goes here</p>
     <a href="https://www.flaticon.com/free-icons/letter-g" title="letter g icons">Page icon created by popo2021</a>
   </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  position: relative;
-  top: 0px;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #15a8bbd3);
-}
+<style>
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
-  overflow: hidden;
+  margin: 0;
+  overflow: visible;
 }
 li {
   float: right;
@@ -59,7 +51,18 @@ li a {
   transition: background-color 300ms;
 }
 li a:hover {
-  background-color: #111;
+  background-color: #333;
+}
+.logo {
+  height: 6em;
+  position: relative;
+  top: 0px;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em var(--color-highlight));
 }
 .foot {
   display: block;

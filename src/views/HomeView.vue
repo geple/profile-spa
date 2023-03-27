@@ -1,6 +1,10 @@
 <template>
     <div>
-        <h1>Hi,<br> I'm <span class="highlight">George,</span><br>developer</h1>
+        <h1 aria-label="Hi, I'm George, developer">
+            <span class="highlight" aria-hidden="true">Hi,</span><br>
+            <span class="highlight" aria-hidden="true">I'm </span>
+            <span class="highlight" aria-hidden="true">George,</span><br>
+            <span class="highlight" aria-hidden="true">developer</span></h1>
         <div class="about">
             <h2>Welcome to my website!</h2>
             <p><span>I am a mechanical engineer turned software engineer, searching for the place to begin my career. </span>
