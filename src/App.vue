@@ -28,8 +28,10 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 
   <div class="foot">
-    <p>Footer goes here</p>
-    <a href="https://www.flaticon.com/free-icons/letter-g" title="letter g icons">Page icon created by popo2021</a>
+    <div class="container">
+      <p id="foot-para">Footer goes here</p>
+      <a href="https://www.flaticon.com/free-icons/letter-g" title="letter g icons" class="highlight">Page icon created by popo2021</a>
+    </div>
   </div>
 </template>
 
@@ -51,7 +53,7 @@ li a {
   transition: background-color 300ms;
 }
 li a:hover {
-  background-color: #333;
+  background-color: rgb(var(--bg-color-dark) / 0.5);
 }
 .logo {
   height: 6em;
@@ -62,16 +64,22 @@ li a:hover {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 1.5em var(--color-highlight));
+  filter: drop-shadow(0 0 1.5em var(--highlight));
 }
 .foot {
-  display: block;
-  position: absolute;
+  display: flex;
+  position: fixed;
+  left: 0;
   bottom: 0;
-  margin: 2rem 1rem;
-  align-items: center;
+  width: 100%;
+  max-height: 5rem;
+  background-color: var(--footer-dark);
+  justify-content: center;
 }
-
+#foot-para {
+  display: inline;
+  padding: 0 0.5rem;
+}
 /* Specific to home icon */
 li:first-child {
   float: left;
