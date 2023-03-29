@@ -1,21 +1,19 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
-  /* Pallette: #000000, #14213d, #fca311, #e5e5e5, #ffffff */
+
+  /* Color variables */
   --bg-color-light: #ffffff;
   --bg-color-dark: 53 53 53;
   --color-light: #000000;
   --color-dark: #FFFFFF;
   --highlight: #dd7596;
-  --footer-dark: #284B63;
-  --footer-light: #D9D9D9;
+  --footer-dark: #417394;
+  --footer-light: #49c0ba;
 
-  /* --bg-color-light: #f9f9f9;
-  --bg-color-dark: #242424;
-  --color-light: #213547;
-  --color-dark: #ffffff;
-  --color-highlight: #11b5e4; */
+  /* Dimension variables */
+  --navbar-height: 64px;
 
   color-scheme: light dark;
   color: var(--color-dark);
@@ -28,64 +26,46 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ddd;
   text-decoration: inherit;
 }
 
 body {
-  /* max-width: 1280px; */
-  margin: 0;
-  display: block;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 h1 {
   font-size: clamp(2.5rem, 4vw, 3.2rem);
   line-height: 1.1;
+  margin-bottom: 1rem;
 }
 h2 {
   font-size: clamp(1rem, 2.5vw, 2rem);
-}
-header {
-  margin-bottom: 9rem;
+  margin-bottom: 1rem;
 }
 
 p {
-  max-width: 952px;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  max-width: 652px;
 }
 
 .container {
-  margin: 1rem 4rem;
+  padding: 0 1.4rem;
+  margin: 0 auto;
 }
 
 .content {
-  /* max-width: 1280px; */
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-bottom: 5rem;
+  padding: 5rem 0;
+  padding-top: calc(var(--navbar-height) + 10px);
+  margin: auto 5rem;
+  
 }
 
 .card {
@@ -100,17 +80,13 @@ button:focus-visible {
   color: var(--highlight);
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--color-light);
     background-color: var(--bg-color-light);
+  }
+  a {
+    color: #ddd;
   }
   a:hover {
     color: #747bff;
