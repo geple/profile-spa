@@ -67,6 +67,7 @@ export default {
   <div class="foot">
     <div class="container">
       <ul>
+        <li class="footer-item"><a target="_blank" href="mailto: gplloyd97@gmail.com" aria-label="Email link"><font-awesome-icon class="footer-icon" icon="fa-solid fa-envelope" /></a></li>
         <li class="footer-item"><a target="_blank" href="https://github.com/geple" aria-label="GitHub profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-github" /></a></li>
         <li class="footer-item"><a target="_blank" href="https://www.linkedin.com/in/george-lloyd/" aria-label="LinkedIn profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-linkedin-in" /></a></li>
         <li class="footer-item"><a target="_blank" href="https://open.spotify.com/user/sanddoggo" aria-label="Spotify profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-spotify" /></a></li>
@@ -249,5 +250,10 @@ ul {
 }
 .footer-icon {
   height: 30px;
+}
+@media screen and (max-width: 600px), (max-height: 650px) {
+  .footer-icon {
+    height: 20px;
+  }
 }
 </style>

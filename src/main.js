@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 // Free solid
-import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
+import { faHatWizard, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 // Free brands
 import { faCodepen, faGithub, faLinkedinIn, faSpotify } from '@fortawesome/free-brands-svg-icons'
 /* add icons to the library */
-library.add(faHatWizard, faGithub, faLinkedinIn, faSpotify, faCodepen)
+library.add(faHatWizard, faEnvelope, faGithub, faLinkedinIn, faSpotify, faCodepen)
 // ----------------------
 
 createApp(App)
