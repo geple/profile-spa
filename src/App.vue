@@ -5,11 +5,32 @@ export default {
   data() {
     return {
       menuOpen: false,
+      favicons: {}
     }
+  },
+  created () {
+    this.favicons = {
+      'light': "../hat-wizard-solid-teal.svg",
+      'dark': "../hat-wizard-solid-light-green.svg"
+    }
+  },
+  mounted() {
+    this.handleIcon()
   },
   methods: {
     toggle() {
       this.menuOpen = !this.menuOpen;
+    },
+    handleIcon() {
+      let matcher = window.matchMedia('(prefers-color-scheme: dark)')
+      const favicon = document.getElementById("favicon")
+      console.log(favicon)
+      if (matcher.matches) {
+        favicon.href = this.favicons['dark']
+      }
+      else {
+        favicon.href = this.favicons['light']
+      }
     }
   }
 }
@@ -19,7 +40,7 @@ export default {
   <header id="navbar" :class="{ opened: menuOpen}">
       <nav class="navbar-container container">
         <a href="/" aria-label="George Lloyd home" class="home-link">
-          <img src="./assets/favicon.ico" alt="Site logo">
+          <font-awesome-icon icon="fa-solid fa-hat-wizard" size="3x"/>
         </a>
         <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" :aria-expanded="menuOpen" @click="toggle">
           <span class="icon-bar"></span>
@@ -37,14 +58,15 @@ export default {
       </nav>
   </header>
 
+  <!-- Page content -->
   <div class="content">
-    <RouterView />
+      <RouterView />
   </div>
 
+  <!-- Footer -->
   <div class="foot">
     <div class="container">
       <p id="foot-para">Footer goes here</p>
-      <a href="https://www.flaticon.com/free-icons/letter-g" title="letter g icons" class="highlight">Page icon created by popo2021</a>
     </div>
   </div>
 </template>
@@ -56,10 +78,10 @@ export default {
 #navbar {
   position: fixed;
   height: var(--navbar-height);
-  background-color: var(--footer-dark);
+  /* background-color: var(--color-secondary); */
   left: 0;
   right: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); */
 }
 .navbar-container {
   display: flex;
@@ -89,7 +111,7 @@ export default {
 }
 
 .navbar-link:is(:focus, :hover) {
-  color: var(--highlight);
+  color: var(--color-text);
   background-color: var(--footer-light);
 }
 
@@ -109,19 +131,19 @@ export default {
 #navbar-toggle:is(:focus, :hover) .icon-bar {
   background-color: var(--highlight);
 }
-#navbar.opened #navbar-toggle
+.opened #navbar-toggle
 .icon-bar:is(:first-child, :last-child) {
   position: absolute;
   margin: 0;
   width: 30px;
 }
-#navbar.opened #navbar-toggle .icon-bar:first-child {
+.opened #navbar-toggle .icon-bar:first-child {
   transform: rotate(45deg);
 }
-#navbar.opened #navbar-toggle .icon-bar:nth-child(2) {
+.opened #navbar-toggle .icon-bar:nth-child(2) {
   opacity: 0;
 }
-#navbar.opened #navbar-toggle .icon-bar:last-child {
+.opened #navbar-toggle .icon-bar:last-child {
   transform: rotate(-45deg);
 }
 #navbar-menu {
@@ -135,7 +157,7 @@ export default {
   visibility: hidden;
   right: -1000px;
   }
-#navbar.opened #navbar-menu {
+.opened #navbar-menu {
   right: 0;
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.4);
@@ -179,7 +201,7 @@ export default {
   }
 
   #navbar #navbar-menu, 
-  #navbar.opened #navbar-menu {
+  .opened #navbar-menu {
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
     position: static;
@@ -192,7 +214,7 @@ export default {
   }
 
   #navbar .navbar-links, 
-  #navbar.opened .navbar-links {
+  .opened .navbar-links {
     margin: 0;
     padding: 0;
     box-shadow: none;
@@ -217,13 +239,13 @@ export default {
 }
 .foot {
   display: flex;
-  position: fixed;
+  align-self: flex-end;
   left: 0;
   bottom: 0;
   width: 100%;
+  margin-top: auto;
   max-height: 5rem;
   background-color: var(--footer-dark);
-  justify-content: center;
 }
 #foot-para {
   display: inline;

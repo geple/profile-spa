@@ -1,23 +1,65 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
+/* ## Import fonts */
+@font-face {
+  font-family: 'MontserratVariable';
+  src: url(".\assets\font\Montserrat\Montserrat-VariableFont_wght.ttf") format("truetype");
+  /* Specify font weight range */
+  font-weight: 1 800;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('.\assets\font\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf') format("truetype");
+  font-stretch: 75% 100%;
+}
 
-  /* Color variables */
-  --bg-color-light: #ffffff;
-  --bg-color-dark: 53 53 53;
-  --color-light: #000000;
-  --color-dark: #FFFFFF;
-  --highlight: #dd7596;
-  --footer-dark: #417394;
-  --footer-light: #49c0ba;
+/* ## Main colors */
+:root {
+  /* ChatGPT's color palette */
+  --color-1: #005F73; /* (dark teal) */
+  --color-2: #0A9396; /* (teal) */
+  --color-3: #94D2BD; /* (light green) */
+  --color-4: #E9D8A6; /* (tan) */
+  --color-5: #EE9B00; /* (orange) */
+
+  /* Dark theme */
+  --color-d1: rgb(36, 89, 83);
+  --color-d2: rgb(64, 142, 145);
+  --color-d3: rgb(228, 147, 147);
+  
+  /* Light theme */
+  --color-l1: rgb(246, 244, 210);
+  --color-l2: rgb(34, 116, 165);
+  --color-l3: rgb(239, 118, 122);
+
+  /* Default dark theme */
+  --color-primary: var(--color-1);
+  --color-secondary: var(--color-2);
+  --color-accent: var(--color-3);
+  --color-text: #f0f0f0;
+  --color-heading: var(--color-4)
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: var(--color-4);
+    --color-secondary: var(--color-l2);
+    --color-accent: var(--color-l3);
+    --color-text: black;
+    --color-heading: var(--color-1);
+  }
+}
+
+
+:root {
+  font-family: OpenSans, MontserratVariable, sans-serif;
+  line-height: 1.6;
+  font-weight: 200;
+  font-stretch: 100%;
 
   /* Dimension variables */
   --navbar-height: 64px;
 
   color-scheme: light dark;
-  color: var(--color-dark);
-  background-color: var(--bg-color-dark);
+  color: var(--color-text);
+  background-color: var(--color-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,41 +73,53 @@
   margin: 0;
   padding: 0;
 }
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page view content */
+.content {
+  padding: 5rem 0;
+  padding-top: calc(var(--navbar-height) + 10px);
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+}
 
 a {
   font-weight: 500;
-  color: #ddd;
+  color: var(--color-2);
   text-decoration: inherit;
-}
-
-body {
-  height: 100vh;
 }
 
 h1 {
   font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 500;
+  font-stretch: 100%;
   line-height: 1.1;
   margin-bottom: 1rem;
+  color: var(--color-heading);
 }
+/* Dark/Light auto change */
+
 h2 {
   font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: 500;
+  font-stretch: 100%;
+  color: var(--color-heading);
   margin-bottom: 1rem;
 }
 
 p {
-  max-width: 652px;
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  max-width: 752px;
 }
 
 .container {
-  padding: 0 1.4rem;
+  padding: 0 5rem;
   margin: 0 auto;
-}
-
-.content {
-  padding: 5rem 0;
-  padding-top: calc(var(--navbar-height) + 10px);
-  margin: auto 5rem;
-  
 }
 
 .card {
@@ -77,21 +131,5 @@ p {
   transition: color 300ms;
 }
 .highlight:hover {
-  color: var(--highlight);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--color-light);
-    background-color: var(--bg-color-light);
-  }
-  a {
-    color: #ddd;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  color: var(--color-accent);
 }

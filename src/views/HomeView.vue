@@ -23,4 +23,7 @@
 </script>
 
 <style lang="scss" scoped>
+// div {
+//     display: inline-block;
+// }
 </style>
