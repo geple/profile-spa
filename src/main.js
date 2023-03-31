@@ -8,10 +8,14 @@ import router from './index'
 import { library } from '@fortawesome/fontawesome-svg-core'
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 /* import specific icons */
+// Free solid
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
+// Free brands
+import { faCodepen, faGithub, faLinkedinIn, faSpotify } from '@fortawesome/free-brands-svg-icons'
 /* add icons to the library */
-library.add(faHatWizard)
+library.add(faHatWizard, faGithub, faLinkedinIn, faSpotify, faCodepen)
 // ----------------------
 
 createApp(App)

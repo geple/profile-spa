@@ -19,12 +19,8 @@
   --color-3: #94D2BD; /* (light green) */
   --color-4: #E9D8A6; /* (tan) */
   --color-5: #EE9B00; /* (orange) */
+  --color-6: #d8dbe2;
 
-  /* Dark theme */
-  --color-d1: rgb(36, 89, 83);
-  --color-d2: rgb(64, 142, 145);
-  --color-d3: rgb(228, 147, 147);
-  
   /* Light theme */
   --color-l1: rgb(246, 244, 210);
   --color-l2: rgb(34, 116, 165);
@@ -35,7 +31,8 @@
   --color-secondary: var(--color-2);
   --color-accent: var(--color-3);
   --color-text: #f0f0f0;
-  --color-heading: var(--color-4)
+  --color-links: var(--color-3);
+  --color-heading: var(--color-4);
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -90,8 +87,12 @@
 
 a {
   font-weight: 500;
-  color: var(--color-2);
+  color: var(--color-links);
   text-decoration: inherit;
+  transition: color 300ms ease-in-out;
+}
+a:hover {
+  color: #FFC2E2;
 }
 
 h1 {

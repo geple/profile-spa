@@ -10,8 +10,8 @@ export default {
   },
   created () {
     this.favicons = {
-      'light': "../hat-wizard-solid-teal.svg",
-      'dark': "../hat-wizard-solid-light-green.svg"
+      'light': "../earth-oceania-light.svg",
+      'dark': "../earth-oceania-dark.svg"
     }
   },
   mounted() {
@@ -40,7 +40,7 @@ export default {
   <header id="navbar" :class="{ opened: menuOpen}">
       <nav class="navbar-container container">
         <a href="/" aria-label="George Lloyd home" class="home-link">
-          <font-awesome-icon icon="fa-solid fa-hat-wizard" size="3x"/>
+          <font-awesome-icon class="home-icon" icon="fa-solid fa-hat-wizard" size="3x"/>
         </a>
         <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" :aria-expanded="menuOpen" @click="toggle">
           <span class="icon-bar"></span>
@@ -66,7 +66,12 @@ export default {
   <!-- Footer -->
   <div class="foot">
     <div class="container">
-      <p id="foot-para">Footer goes here</p>
+      <ul>
+        <li class="footer-item"><a target="_blank" href="https://github.com/geple" aria-label="GitHub profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-github" /></a></li>
+        <li class="footer-item"><a target="_blank" href="https://www.linkedin.com/in/george-lloyd/" aria-label="LinkedIn profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-linkedin-in" /></a></li>
+        <li class="footer-item"><a target="_blank" href="https://open.spotify.com/user/sanddoggo" aria-label="Spotify profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-spotify" /></a></li>
+        <li class="footer-item"><a target="_blank" href="https://codepen.io/geple" aria-label="Codepen profile"><font-awesome-icon class="footer-icon" icon="fa-brands fa-codepen" /></a></li>
+      </ul>
     </div>
   </div>
 </template>
@@ -78,10 +83,10 @@ export default {
 #navbar {
   position: fixed;
   height: var(--navbar-height);
-  /* background-color: var(--color-secondary); */
+  background-color: var(--color-primary);
   left: 0;
   right: 0;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .navbar-container {
   display: flex;
@@ -97,22 +102,12 @@ export default {
   text-decoration: none;
   display: flex;
   align-items: center;
-  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
-.navbar-links {
-  background-color: var(--footer-light);
-}
-
 .navbar-link {
   justify-content: center;
   width: 100%;
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
-}
-
-.navbar-link:is(:focus, :hover) {
-  color: var(--color-text);
-  background-color: var(--footer-light);
 }
 
 /* Navbar Toggle button */
@@ -129,7 +124,7 @@ export default {
   margin-left: auto;
 }
 #navbar-toggle:is(:focus, :hover) .icon-bar {
-  background-color: var(--highlight);
+  background-color: var(--color-text);
 }
 .opened #navbar-toggle
 .icon-bar:is(:first-child, :last-child) {
@@ -176,10 +171,12 @@ export default {
 }
 
 /* Navigation links */
-.navbar-links {
+ul {
   list-style: none;
-  position: absolute;
   display: flex;
+}
+.navbar-links {
+  position: absolute;
   flex-direction: column;
   align-items: center;
   top: 0;
@@ -196,7 +193,7 @@ export default {
 
 /* ## Desktop Layout navigation bar */
 @media screen and (min-width: 900px) {
-  #navbar-toggle, #navbar-toggle[aria-expanded='true'] {
+  #navbar-toggle, .opened {
     display: none;
   }
 
@@ -239,17 +236,18 @@ export default {
 }
 .foot {
   display: flex;
-  align-self: flex-end;
   left: 0;
   bottom: 0;
   width: 100%;
   margin-top: auto;
   max-height: 5rem;
   background-color: var(--footer-dark);
+  padding-bottom: 1rem;
 }
-#foot-para {
-  display: inline;
-  padding: 0 0.5rem;
+.footer-item {
+  width: 3rem;
 }
-
+.footer-icon {
+  height: 30px;
+}
 </style>
