@@ -72,8 +72,12 @@
 }
 #app {
   height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+}
+html {
+  height: -webkit-fill-available;
 }
 
 /* Page view content */
