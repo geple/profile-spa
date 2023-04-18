@@ -23,4 +23,7 @@
 </script>
 
 <style lang="scss" scoped>
+a:hover {
+    font-stretch: 90%;
+}
 </style>

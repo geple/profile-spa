@@ -1,13 +1,13 @@
 /* ## Import fonts */
 @font-face {
   font-family: 'MontserratVariable';
-  src: url(".\assets\font\Montserrat\Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url('.\assets\font\Montserrat\Montserrat-VariableFont_wght.ttf') format('truetype');
   /* Specify font weight range */
   font-weight: 1 800;
 }
 @font-face {
   font-family: 'OpenSans';
-  src: url('.\assets\font\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf') format("truetype");
+  src: url('.\assets\font\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
   font-stretch: 75% 100%;
 }
 
@@ -89,7 +89,7 @@ a {
   font-weight: 500;
   color: var(--color-links);
   text-decoration: inherit;
-  transition: color 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 a:hover {
   color: #FFC2E2;
@@ -97,8 +97,8 @@ a:hover {
 
 h1 {
   font-size: clamp(2.5rem, 4vw, 3.2rem);
-  font-weight: 500;
-  font-stretch: 100%;
+  font-weight: 800;
+  text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 1rem;
   color: var(--color-heading);
@@ -107,8 +107,7 @@ h1 {
 
 h2 {
   font-size: clamp(1rem, 2.5vw, 2rem);
-  font-weight: 500;
-  font-stretch: 100%;
+  font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 1rem;
 }
@@ -129,8 +128,10 @@ p {
 
 .highlight {
   will-change: color;
-  transition: color 300ms;
+  transition: all 500ms;
+  cursor: default;
 }
 .highlight:hover {
   color: var(--color-accent);
+  font-stretch: 80%;
 }
