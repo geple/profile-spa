@@ -78,7 +78,7 @@ export default {
 </template>
 
 <style>
-/* # Navbar */
+/* ## Navbar */
 /* Tutorial: https://www.aleksandrhovhannisyan.com/blog/responsive-navbar-tutorial/#what-were-building */
 
 #navbar {
@@ -87,7 +87,7 @@ export default {
   background-color: var(--color-primary);
   left: 0;
   right: 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 6px rgba(0, 95, 115, 0.6);
 }
 .navbar-container {
   display: flex;
@@ -97,6 +97,7 @@ export default {
   align-items: center;
 }
 
+/* Navbar items */
 .home-link, 
 .navbar-link {
   transition: color 200ms ease-in-out;
@@ -150,13 +151,13 @@ export default {
   transition: visibility 0.2s ease-in-out,
               right 0.2s ease-in-out,
               background-color 0.2s ease-in-out;
-  visibility: hidden;
+  visibility: visible;
   right: -1000px;
   }
 .opened #navbar-menu {
   right: 0;
   visibility: visible;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 .icon-bar {
@@ -185,7 +186,8 @@ ul {
   right: 0;
   left: unset;
   padding: 1em;
-  box-shadow: -5px 20px 20px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-primary);
+  box-shadow: -4px 30px 30px rgba(0, 0, 0, 0.4);
 }
 .navbar-item {
   margin: 0.4rem;
@@ -235,9 +237,10 @@ ul {
 .logo:hover {
   filter: drop-shadow(0 0 1.5em var(--highlight));
 }
+
+/* ## Footer rules */
 .foot {
   display: flex;
-  left: 0;
   bottom: 0;
   width: 100%;
   margin-top: auto;
@@ -246,7 +249,7 @@ ul {
   padding-bottom: 1rem;
 }
 .footer-item {
-  width: 3rem;
+  width: clamp(2rem, 10vw, 5rem);
 }
 .footer-icon {
   height: 30px;
