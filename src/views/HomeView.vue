@@ -5,9 +5,9 @@
             <span class="highlight" aria-hidden="true">i</span>
             <span class="highlight" aria-hidden="true">,</span>
             <br>
-            <span class="highlight" aria-hidden="true">I </span>
-            <span class="highlight" aria-hidden="true">' </span>
-            <span class="highlight" aria-hidden="true">m </span>
+            <span class="highlight" aria-hidden="true">I</span>
+            <span class="highlight" aria-hidden="true">'</span>
+            <span class="highlight" aria-hidden="true">m</span>
             <span style="margin-right: 1rem;"></span>
             <span class="highlight" aria-hidden="true">G</span>
             <span class="highlight" aria-hidden="true">e</span>
