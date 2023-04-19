@@ -39,9 +39,7 @@ export default {
                 <p>
                     Whilst studying a bachelor of mechanical engineering at Monash University, I had the opportunity to join the <a href="https://www.saea.com.au/formula-sae-a">Formula Student</a> team <a href="https://www.monashmotorsport.com/">Monash Motorsport</a>. It exposed me to the practical side of engineering. In 2019, I led the Chassis and Suspension sub-team, and in 2020, I took the role of Chief Technical Officer, leading the team's technical direction. I enjoyed coding in <span class="accent">MATLAB</span> to create physics simulations, such as a lap-time simulator to model the car's performance around a track.
                 </p>
-                <div class="video">
-                    <iframe src="https://player.vimeo.com/video/381307129?h=4823cb7050&color=ffffff&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                
                 <p>
                     After graduating, I worked as a Mechanical Design Engineer at <a href="https://www.adde.com.au/">Andrew Donald Design Engineering</a>. It was a great experience that unfortunately ended early with  the company entering liquidation at the end of 2022.
                 </p>
@@ -55,6 +53,9 @@ export default {
             </div>
             <div class="column photo">
                 <img :src="profileImage" alt="Portrait of George">
+                <div class="container video">
+                    <iframe src="https://player.vimeo.com/video/381307129?h=4823cb7050&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
@@ -73,30 +74,38 @@ export default {
 }
 @media screen and (max-width: 900px) {
     .photo {
+        transform: translate(50%, 0%);
         order: -1;
+        width: 50%;
+    }
+    .video {
+        display: none;
     }
 }
 img {
     border-radius: 5px;
-    width: 80%;
-    max-width: 35rem;
+    width: 70%;
+    max-width: 25rem;
 }
 .video {
-    padding:56.25% 0 0 0;
-    margin-bottom: 1rem;
-    position:relative;
-
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
 }
 iframe {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    max-width: 25rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
     border-radius: 6px;
 }
 ul {
-    list-style: square inside;
+    list-style: circle inside;
 }
 
 </style>
