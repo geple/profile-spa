@@ -38,9 +38,8 @@ export default {
 
 <template>
   <header id="navbar" :class="{ opened: menuOpen}">
-      <nav class="navbar-container container">
+      <nav class="navbar-container">
         <a href="/" aria-label="George Lloyd home" class="home-link">
-          <!-- <font-awesome-icon class="home-icon" icon="fa-solid fa-g" size="x"/> -->
           <p style="font-size: 2.5rem;">G</p>
         </a>
         <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" :aria-expanded="menuOpen" @click="toggle">
@@ -86,6 +85,7 @@ export default {
   position: fixed;
   height: var(--navbar-height);
   background-color: var(--color-primary);
+  padding: 0 1.5rem;
   left: 0;
   right: 0;
   margin: 0 calc(8px + 1vw);

@@ -11,12 +11,8 @@
   font-stretch: 75% 100%;
 }
 
-/* ## Main colors */
 :root {
-  /* Min screen width variable */
-  --min-width: 900px;
-
-  /* ChatGPT's color palette */
+  /* ## Colors */
   --color-1: rgb(4, 49, 58); /* (dark teal) */
   --color-2: #0A9396; /* (teal) */
   --color-3: rgb(166, 218, 178); /* (light green) */
@@ -106,11 +102,12 @@ a:hover {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.1;
   z-index: 1;
+  cursor: default;
   margin-bottom: 1rem;
   color: var(--color-heading);
 }
@@ -125,21 +122,30 @@ h2 {
 
 p {
   font-size: clamp(1rem, 1.4vw, 1.5rem);
-  max-width: 752px;
+  max-width: 852px;
+  margin-bottom: 0.8rem;
 }
 
 .container {
-  padding: 0 1.5rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Media query switches flex to column */
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .card {
   padding: 2em;
 }
 
+/* ## Text highlighting */
 .highlight {
   transition: color 500ms;
-  cursor: default;
   display: inline-flex;
   transform-origin: center;
 }

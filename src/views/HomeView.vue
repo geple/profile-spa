@@ -8,13 +8,23 @@
             <span class="highlight" aria-hidden="true">I</span>
             <span class="highlight" aria-hidden="true">'</span>
             <span class="highlight" aria-hidden="true">m</span>
-            <span style="margin-right: 1rem;"></span>
+             <span style="margin-right: 1rem;"></span>      <!--  Adds some space between words  -->
             <span class="highlight" aria-hidden="true">G</span>
             <span class="highlight" aria-hidden="true">e</span>
             <span class="highlight" aria-hidden="true">o</span>
             <span class="highlight" aria-hidden="true">r</span>
             <span class="highlight" aria-hidden="true">g</span>
             <span class="highlight" aria-hidden="true">e</span>
+            <span class="highlight" aria-hidden="true">,</span>
+            <br>
+            <span class="highlight" aria-hidden="true">E</span>
+            <span class="highlight" aria-hidden="true">n</span>
+            <span class="highlight" aria-hidden="true">g</span>
+            <span class="highlight" aria-hidden="true">i</span>
+            <span class="highlight" aria-hidden="true">n</span>
+            <span class="highlight" aria-hidden="true">e</span>
+            <span class="highlight" aria-hidden="true">e</span>
+            <span class="highlight" aria-hidden="true">r</span>
         </h1>
         <div class="about">
             <h2>Welcome to my website!</h2>
