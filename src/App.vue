@@ -212,7 +212,7 @@ ul {
     width: 500px;
   }
   .navbar-links {
-    background-color: inherit;
+    background-color: var(--color-primary);
   }
 
   #navbar .navbar-links, 
