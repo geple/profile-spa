@@ -75,16 +75,16 @@
 }
 
 #app {
-  min-height: 100vh;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
 }
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
-html {
-  height: -webkit-fill-available;
+html, body {
+  height: 100%;
 }
 
 /* Page view content */
