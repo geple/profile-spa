@@ -37,7 +37,7 @@ export default {
                 <h2>About me</h2>
                 <p>I'm George Lloyd, a 25-year-old software engineer from Melbourne Australia.</p>
                 <p>
-                    Whilst studying a bachelor of mechanical engineering at Monash University, I had the opportunity to join the <a href="https://www.saea.com.au/formula-sae-a" target="_blank">Formula Student</a> team <a href="https://www.monashmotorsport.com/" target="_blank">Monash Motorsport</a>. It exposed me to the practical side of engineering. In 2019, I led the Chassis and Suspension sub-team, and in 2020, I took the role of Chief Technical Officer, leading the team's technical direction. I enjoyed coding in <span class="accent">MATLAB</span> to create physics simulations, such as a lap-time simulator to model the car's performance around a track.
+                    Whilst studying a bachelor of mechanical engineering at Monash University, I had the opportunity to join the <a href="https://www.saea.com.au/formula-sae-a" target="_blank">Formula Student</a> team <a href="https://www.monashmotorsport.com/" target="_blank">Monash Motorsport</a>. It exposed me to the practical side of engineering. In 2019, I led the Chassis and Suspension sub-team, and in 2020, I took the role of Chief Technical Officer, leading the team's technical direction. I enjoyed coding in MATLAB to create physics simulations, such as a lap-time simulator to model the car's performance around a track.
                 </p>
                 
                 <p>
