@@ -1,3 +1,15 @@
+<script>
+import profileImage from '/public/img/profile-photo.jpg'
+
+export default {
+    data() {
+        return {
+            profileImage
+        };
+    }
+}
+</script>
+
 <template>
     <div>
         <h1>About</h1>
@@ -23,7 +35,7 @@
                 </p>
             </div>
             <div class="column photo">
-                <img src="public\img\104298071_3549760691711824_4616102222886798354_n.jpg" alt="Portrait of George">
+                <img :src="profileImage" alt="Portrait of George">
             </div>
         </div>
 
