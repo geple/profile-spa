@@ -40,7 +40,8 @@ export default {
   <header id="navbar" :class="{ opened: menuOpen}">
       <nav class="navbar-container container">
         <a href="/" aria-label="George Lloyd home" class="home-link">
-          <font-awesome-icon class="home-icon" icon="fa-solid fa-hat-wizard" size="3x"/>
+          <!-- <font-awesome-icon class="home-icon" icon="fa-solid fa-g" size="x"/> -->
+          <p style="font-size: 2.5rem;">G</p>
         </a>
         <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" :aria-expanded="menuOpen" @click="toggle">
           <span class="icon-bar"></span>
@@ -88,7 +89,7 @@ export default {
   left: 0;
   right: 0;
   margin: 0 calc(8px + 1vw);
-  box-shadow: 0 10px 6px rgba(0, 95, 115, 0.6);
+  box-shadow: 0 10px 6px rgba(4, 49, 58, 0.6);
 }
 .navbar-container {
   display: flex;
