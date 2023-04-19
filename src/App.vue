@@ -1,6 +1,6 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import resume from '/public/GeorgeLloyd CV.pdf'
+import resume from '/GeorgeLloyd CV.pdf'
 
 export default {
   data() {

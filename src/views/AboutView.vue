@@ -68,11 +68,12 @@ export default {
 <style lang="scss" scoped>
 .column {       
     flex: 1;
-    max-height: 75vh;   // This may cause an issue on wide screens
     overflow: hidden;
 }
 .photo {
+    z-index: -1;
     text-align: center;
+    max-height: 75vh;
 }
 @media screen and (max-width: 900px) {
     .photo {

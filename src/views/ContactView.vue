@@ -25,27 +25,34 @@
 
 <style lang="scss" scoped>
 .column {
+    align-items: flex-start;
     flex: 1;
     margin-bottom: 2rem;
+    overflow: hidden;
+}
+.links {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    margin-top: 0;
 }
 ul {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    top: -3rem;
-    left: 7rem;
-    bottom: 0;
-    right: 0;
-    // left: unset;
-    padding: 1em;
-    list-style: none;
+    margin-left: 1rem;
+    list-style: circle;
 }
+li {
+    margin-bottom: 1rem;
+}
+
 h2 {
-    display: inline;
-    margin-right: 1rem;
-    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 1rem;
 }
 a {
-    font-size: 1.5rem;
+    line-height: 1rem;
+
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 </style>
