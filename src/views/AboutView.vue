@@ -66,8 +66,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.column {
+.column {       
     flex: 1;
+    max-height: 75vh;   // This may cause an issue on wide screens
+    overflow: hidden;
 }
 .photo {
     text-align: center;
@@ -88,20 +90,24 @@ img {
     max-width: 25rem;
 }
 .video {
-    text-align: center;
     position: relative;
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
 }
+.container.video {
+    margin: 0;
+}
 iframe {
-    max-width: 25rem;
+    --width: 50rem;
+    max-width: var(--width);
+    max-height: calc(var(--width) * 9 / 16);
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     border-radius: 6px;
 }
 ul {

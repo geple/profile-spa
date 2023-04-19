@@ -137,7 +137,6 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-height: 80vh;
 }
 /* Media query switches flex to column */
 @media screen and (max-width: 900px) {
