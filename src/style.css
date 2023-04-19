@@ -16,8 +16,8 @@
   /* ChatGPT's color palette */
   --color-1: rgb(0, 95, 115); /* (dark teal) */
   --color-2: #0A9396; /* (teal) */
-  --color-3: #94D2BD; /* (light green) */
-  --color-4: #E9D8A6; /* (tan) */
+  --color-3: rgb(166, 218, 178); /* (light green) */
+  --color-4: rgb(238, 229, 201); /* (white-tan) */
   --color-5: #EE9B00; /* (orange) */
   --color-6: #d8dbe2;
 
@@ -100,7 +100,7 @@ a {
   transition: all 300ms ease-in-out;
 }
 a:hover {
-  color: #FFC2E2;
+  color: var(--color-6);
 }
 
 h1 {
@@ -135,11 +135,36 @@ p {
 }
 
 .highlight {
-  will-change: color;
-  transition: all 500ms;
+  transition: color 500ms;
   cursor: default;
+  display: inline-block;
+  transform-origin: center;
 }
+
+@keyframes scale-in {
+  0% {
+    transform:scale(1);
+  } 
+  30% {
+    transform:scale(1.2);
+  }
+  100% {
+    transform:scale(1.1);
+  }
+}
+@keyframes scale-out {
+  0% {
+    transform:scale(1.1);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
 .highlight:hover {
   color: var(--color-accent);
-  font-stretch: 80%;
+  animation: scale-in 0.5s forwards;
+}
+.highlight:not(:hover) {
+  animation: scale-out 0.5s forwards;
 }

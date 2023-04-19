@@ -87,6 +87,7 @@ export default {
   background-color: var(--color-primary);
   left: 0;
   right: 0;
+  margin: 0 calc(8px + 1vw);
   box-shadow: 0 10px 6px rgba(0, 95, 115, 0.6);
 }
 .navbar-container {
