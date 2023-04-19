@@ -37,17 +37,17 @@ export default {
                 <h2>About me</h2>
                 <p>I'm George Lloyd, a 25-year-old software engineer from Melbourne Australia.</p>
                 <p>
-                    Whilst studying a bachelor of mechanical engineering at Monash University, I had the opportunity to join the <a href="https://www.saea.com.au/formula-sae-a">Formula Student</a> team <a href="https://www.monashmotorsport.com/">Monash Motorsport</a>. It exposed me to the practical side of engineering. In 2019, I led the Chassis and Suspension sub-team, and in 2020, I took the role of Chief Technical Officer, leading the team's technical direction. I enjoyed coding in <span class="accent">MATLAB</span> to create physics simulations, such as a lap-time simulator to model the car's performance around a track.
+                    Whilst studying a bachelor of mechanical engineering at Monash University, I had the opportunity to join the <a href="https://www.saea.com.au/formula-sae-a" target="_blank">Formula Student</a> team <a href="https://www.monashmotorsport.com/" target="_blank">Monash Motorsport</a>. It exposed me to the practical side of engineering. In 2019, I led the Chassis and Suspension sub-team, and in 2020, I took the role of Chief Technical Officer, leading the team's technical direction. I enjoyed coding in <span class="accent">MATLAB</span> to create physics simulations, such as a lap-time simulator to model the car's performance around a track.
                 </p>
                 
                 <p>
-                    After graduating, I worked as a Mechanical Design Engineer at <a href="https://www.adde.com.au/">Andrew Donald Design Engineering</a>. It was a great experience that unfortunately ended early with  the company entering liquidation at the end of 2022.
+                    After graduating, I worked as a Mechanical Design Engineer at <a href="https://www.adde.com.au/" target="_blank">Andrew Donald Design Engineering</a>. It was a great experience that unfortunately ended early with  the company entering liquidation at the end of 2022.
                 </p>
                 <p>
-                    Finding myself redundant, I decided to pursue my interest in computer science. I have been building my skills in a variety of languages, and taking online courses to such as <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">Harvard's CS50x</a>. It's been an exciting journey, and I'm ready to apply my newfound skills in the tech industry as a software engineer.
+                    Finding myself redundant, I decided to pursue my interest in computer science. I have been building my skills in a variety of languages, and taking online courses to such as <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank">Harvard's CS50x</a>. It's been an exciting journey, and I'm ready to apply my newfound skills in the tech industry as a software engineer.
                 </p>
                 <p>
-                    I'm actively searching for opportunities. If you think my skills could be useful in your team, <a href="/contact">contact me</a>.
+                    I'm actively searching for opportunities. If you think my skills could be useful in your team, <a href="/contact" target="_blank">contact me</a>.
                 </p>
 
             </div>

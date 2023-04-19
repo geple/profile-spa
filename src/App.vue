@@ -1,11 +1,13 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
+import resume from '/public/GeorgeLloyd CV.pdf'
 
 export default {
   data() {
     return {
       menuOpen: false,
-      favicons: {}
+      favicons: {},
+      resume
     }
   },
   created () {
@@ -50,9 +52,9 @@ export default {
         <div id="navbar-menu" class="sidebar" aria-labelledby="navbar-toggle" @click.self="toggle">
           <ul class="navbar-links">
             <li class="navbar-item"><a href="/about" class="navbar-link">About Me</a></li>
-            <li class="navbar-item"><a href="/xperience" class="navbar-link">Experience</a></li>
-            <li class="navbar-item"><a href="/projects" class="navbar-link">Projects</a></li>
+            <li class="navbar-item"><a href="/work" class="navbar-link">Work</a></li>
             <li class="navbar-item"><a href="/contact" class="navbar-link">Contact</a></li>
+            <li class="navbar-item"><a :href="resume" class="navbar-link resume" target="_blank">Resume</a></li>
           </ul>
         </div>
       </nav>
@@ -196,6 +198,17 @@ ul {
   width: 100%;
 }
 
+/* ## Resume button only */
+.resume {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--highlight);
+  transition: background-color 0.3s ease-out;
+}
+.resume:hover {
+  background-color: rgba(158, 176, 166, 0.4);
+}
+
 /* ## Desktop Layout navigation bar */
 @media screen and (min-width: 900px) {
   #navbar-toggle, .opened {
@@ -261,4 +274,6 @@ ul {
     height: 20px;
   }
 }
+
+
 </style>
