@@ -77,7 +77,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 /* ## Navbar */
 /* Tutorial: https://www.aleksandrhovhannisyan.com/blog/responsive-navbar-tutorial/#what-were-building */
 

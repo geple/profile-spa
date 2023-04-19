@@ -28,7 +28,7 @@
         </h1>
         <div class="about">
             <h2>Welcome to my website!</h2>
-            <p>I'm a motivated engineer looking for my start in tech. With a bachelors degree in Mechanical Engineering from 
+            <p class="p-lg">I'm a motivated engineer looking for my start in tech. With a bachelors degree in Mechanical Engineering from 
                 Monash University, I have an analytical mind and love problem solving. Find out more <a href="/about">about me</a> and if you think my skills could be useful in your team,
                 <a href="/contact">contact me!</a></p>
         </div>

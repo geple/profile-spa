@@ -85,7 +85,7 @@ html, body {
 
 /* Page view content */
 .content {
-  padding: 5rem 0;
+  padding: 2rem 0;
   padding-top: calc(var(--navbar-height) + 10px);
   margin: 0 calc(8px + 2vw);
   flex: 1;
@@ -101,29 +101,35 @@ a:hover {
   color: var(--color-6);
 }
 
+/* Dark/Light auto change */
+
+h1, h2, h3 {
+  color: var(--color-heading);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
 h1 {
   font-size: clamp(2.5rem, 4vw, 4.2rem);
   font-weight: 800;
   text-transform: uppercase;
-  line-height: 1.1;
-  z-index: 1;
   cursor: default;
-  margin-bottom: 1rem;
-  color: var(--color-heading);
 }
-/* Dark/Light auto change */
-
 h2 {
   font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 600;
-  color: var(--color-heading);
-  margin-bottom: 1rem;
+}
+h3 {
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 p {
-  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
   max-width: 852px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+.p-lg {
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
 }
 
 .container {
@@ -181,4 +187,9 @@ p {
   .highlight:not(:hover) {
     animation: scale-out 0.5s forwards;
   }
+}
+
+.accent {
+  color: var(--color-l3);
+  font-weight: bold;
 }
