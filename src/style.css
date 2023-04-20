@@ -33,7 +33,7 @@
   --color-links: var(--color-3);
   --color-heading: var(--color-4);
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --color-primary: var(--color-4);
     --color-secondary: var(--color-l2);
@@ -41,7 +41,7 @@
     --color-text: black;
     --color-heading: var(--color-1);
   }
-}
+} */
 
 
 :root {
