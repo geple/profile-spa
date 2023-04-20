@@ -18,10 +18,10 @@ import { execSync } from 'child_process';
 })();
 
 // Push new homepage file to github
-execSync('git config user.name "geple');
+execSync('git config user.name "geple"');
 execSync('git config user.email "gplloyd97@gmail.com"');
 
 execSync('git add public/homepage.jpg');
-execSync('git commit -m "Auto update homepage screenshot"');
+execSync(`git commit -m "Auto update homepage screenshot"`);
 
 execSync('git push origin master');
