@@ -27,3 +27,6 @@ dist-ssr
 
 # obsidian markdown reader
 .obsidian/
+
+# Screenshots script
+screenshot.js
