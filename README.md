@@ -1,7 +1,7 @@
 <h1 align="center">
-    <a href="https://geple.page" target="_blank">geple.page</a>
+    geple.page
 </h1>
----
+
 <p align="center">
     My personal profile website, <a href="https://geple.page" target="_blank">geple.page</a> built with <a href="https://vuejs.org/" target="_blank">Vue 3</a> & <a href="https://vitejs.dev/" target="_blank">Vite</a> and deployed with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 </p>
