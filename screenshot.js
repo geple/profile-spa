@@ -15,21 +15,20 @@ import { execSync } from 'child_process';
 
     await page.screenshot({ path: 'public/homepage.jpg' });
     await browser.close();
+    // Push new homepage file to github
+    execSync('git config --global user.name "geple"');
+    execSync('git config --global user.email "gplloyd97@gmail.com"');
+    
+    // Check for outstanding changes and create another commit if needed
+    const hasChanges = execSync('git status --porcelain').toString().trim() !== '';
+    if (hasChanges) {
+      execSync('git add .');
+      execSync('git commit -m "Auto update homepage screenshot (outstanding)"');
+    }
+    
+    
+    execSync('git add public/homepage.jpg');
+    execSync(`git commit -m "Auto update homepage screenshot"`);
+    
+    execSync('git push');
 })();
-
-// Push new homepage file to github
-execSync('git config user.name "geple"');
-execSync('git config user.email "gplloyd97@gmail.com"');
-
-// Check for outstanding changes and create another commit if needed
-const hasChanges = execSync('git status --porcelain').toString().trim() !== '';
-if (hasChanges) {
-  execSync('git add .');
-  execSync('git commit -m "Auto update homepage screenshot (outstanding)"');
-}
-
-
-execSync('git add public/homepage.jpg');
-execSync(`git commit -m "Auto update homepage screenshot"`);
-
-execSync('git push');
