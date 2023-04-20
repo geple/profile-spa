@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node screenshot.js",    
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
     "@vue/cli-plugin-router": "~5.0.0",
+    "puppeteer": "^19.9.1",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.1",
     "vite": "^4.2.0"
