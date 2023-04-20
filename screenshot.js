@@ -21,7 +21,15 @@ import { execSync } from 'child_process';
 execSync('git config user.name "geple"');
 execSync('git config user.email "gplloyd97@gmail.com"');
 
+// Check for outstanding changes and create another commit if needed
+const hasChanges = execSync('git status --porcelain').toString().trim() !== '';
+if (hasChanges) {
+  execSync('git add .');
+  execSync('git commit -m "Auto update homepage screenshot (outstanding)"');
+}
+
+
 execSync('git add public/homepage.jpg');
 execSync(`git commit -m "Auto update homepage screenshot"`);
 
-execSync('git push origin master');
+execSync('git push');
